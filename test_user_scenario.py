@@ -7,6 +7,7 @@ from pages.siding_page import SidingPage
 def test_user_scenario_one(driver):
     side = SidingPage(driver)
 
+    #  TODO add assert for "is visible" Buddy picture
     assert side.check_start_page_header() == "How Much Does Siding Cost In Your Location?"
     # assert side.find_location() == "The Phnom Penh, 12 Area"  # depends on run test location, but don't work now
     side.enter_zip_code('09090')
