@@ -13,3 +13,4 @@ class CommonOps:
 
     def find(self, locator):
         return self.driver.find_element(*locator)
+
