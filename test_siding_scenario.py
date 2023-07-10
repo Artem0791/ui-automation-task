@@ -91,8 +91,7 @@ def test_user_scenario_choose_first_options(driver):
     with step("Phone number confirmation"):
         side.correct_button()
     with step("Check adding client name in text"):
-        time.sleep(10)
-        assert side.page_header() == "Thank you Testname, your contractor QA Customer will call soon!"
+        assert side.final_header() == "Thank you Testname, your contractor QA Customer will call soon!"
 
 
 @allure.label("owner", "Interviewee Artem")
@@ -134,5 +133,4 @@ def test_user_scenario_not_sure_options(driver):
     with step("Phone number confirmation"):
         side.correct_button()
     with step("Check adding client name in text"):
-        time.sleep(10)
-        assert side.page_header() == "Thank you Testname, your contractor QA Customer will call soon!"
+        assert side.final_header() == "Thank you Testname, your contractor QA Customer will call soon!"

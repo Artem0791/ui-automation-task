@@ -51,6 +51,7 @@ class SidingPage(CommonOps):
     SUBMIT_REQUEST_BUTTON = (By.CSS_SELECTOR, "[data-autotest-button-submit-submit-my-request]")
     EDIT_BUTTON = (By.CSS_SELECTOR, "[data-autotest-button-button-edit-phone-number]")
     CORRECT_BUTTON = (By.CSS_SELECTOR, "[data-autotest-button-submit-phone-number-is-correct]")
+    FINAL_HEADER = (By.XPATH, "//h4[text()='Thank you Testname, your contractor QA Customer will call soon!']")
 
     def page_header(self):
         return self.wait_for(self.BLOCK_HEADER).text
@@ -158,3 +159,5 @@ class SidingPage(CommonOps):
     def correct_button(self):
         self.wait_for(self.CORRECT_BUTTON).click()
 
+    def final_header(self):
+        return self.wait_for(self.FINAL_HEADER).text
